@@ -24,7 +24,9 @@ namespace ListImplementations
 			linkList.AddFront(4);
 			Console.Out.WriteLine("Current List: " + linkList);
 			linkList.ReverseRecursive();
-			Console.Out.WriteLine("After reversing List: " + linkList);
+			Console.Out.WriteLine("After recursivly reversing List: " + linkList);
+			linkList.ReverseIterative();
+			Console.Out.WriteLine("After iteratively reversing List: " + linkList);
 		}
 	}
 }

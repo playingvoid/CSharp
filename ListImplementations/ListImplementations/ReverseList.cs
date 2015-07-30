@@ -13,6 +13,11 @@ namespace ListImplementations
 			head = ReverseRecursive(head);
 		}
 
+		public void ReverseIterative()
+		{
+			head = ReverseIterative(head);
+		}
+
 		private static Node ReverseRecursive(Node head)
 		{
 			if (null == head) return null;
@@ -24,6 +29,20 @@ namespace ListImplementations
 			nextToRoot.next = head;
 			head.next = null;
 			return reversedHead;
+		}
+
+		private static Node ReverseIterative(Node head)
+		{
+			Node reversedhead = null;
+			Node curr = head;
+			while(null != curr)
+			{
+				Node temp = curr.next;
+				curr.next = reversedhead;
+				reversedhead = curr;
+				curr = temp;
+			}
+			return reversedhead;
 		}
 	}
 }
