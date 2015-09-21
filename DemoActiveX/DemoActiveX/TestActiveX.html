@@ -1,0 +1,44 @@
+﻿<!DOCTYPE>
+<html>
+<head>
+    <title>DemoActiveX webpage</title>
+</head>
+<!--codebase="DemoCSharpActiveX.cab"-->
+<body>
+    <object id="DemoActiveX" classid="clsid:0914BAF8-F0E9-44EE-9EAA-920551DBE47F"></object>
+
+    <script type="text/javascript">
+        try
+        {
+            var obj = document.DemoActiveX;
+            if (obj)
+            {
+                alert(obj.SayHi());
+            }
+            else
+            {
+                alert("Object is not created!");
+            }
+        }
+        catch (ex)
+        {
+            alert("Some error happens, error message is Hello: " + ex.Description);
+        }
+
+        try {
+            var obj1 = document.DemoActiveX;
+            if (obj1) {
+                alert(obj1.SayHello());
+
+            }
+            else {
+                alert("Object is not created!");
+            }
+        }
+        catch (ex) {
+            alert("Some error happens, error message is Hi: " + ex.Description);
+        }
+
+    </script>
+</body>
+</html>
